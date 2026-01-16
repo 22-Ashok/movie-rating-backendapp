@@ -1,0 +1,22 @@
+{
+  "name": "mini-movie-review",
+  "version": "1.0.0",
+  "description": "creating small movie-review-api",
+  "license": "ISC",
+  "author": "ashok",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start":"node main.js",
+    "dev":"nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.4",
+    "nodemon": "^3.1.11",
+    "zod": "^4.3.5"
+  }
+}
