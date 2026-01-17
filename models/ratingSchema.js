@@ -28,6 +28,10 @@ const RatingSchema = mongoose.Schema({
         ref:MovieModel,
         require:true
     }
+},
+
+{
+    timeStamps:true
 });
 
 /* making compound index of the userId and movieId so that the user do not make multiple review */
@@ -36,6 +40,6 @@ RatingSchema.index(
     {require:true}
 );
 
-const RatingModel = mongoose.Schema('RatingModel', RatingSchema);
+const RatingModel = mongoose.model('RatingModel', RatingSchema);
 
 module.exports = RatingModel 

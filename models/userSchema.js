@@ -21,13 +21,18 @@ const UserSchema = mongoose.Schema({
     },
 
     role:{
+        type:String,
         enum:["admin", "user"],
-        require:true
-    },
+        require:true,
+        default:"user"
+    }},
 
-    createdAt:Date
-});
+    {
+        timestamps:true
+    }
 
-const UserModel = mongoose.Model('UserModel', UserSchema);
+);
+
+const UserModel = mongoose.model('UserModel', UserSchema);
 
 module.exports = UserModel;

@@ -37,8 +37,12 @@ const MovieSchema = mongoose.Schema({
         require:true
     }
 
+},
+
+{
+    timeStamps:true
 })
 
-const MovieModel = mongoose.Model("MovieModel", MovieSchema);
+const MovieModel = mongoose.model("MovieModel", MovieSchema);
 
 module.exports = MovieModel
