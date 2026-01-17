@@ -1,0 +1,16 @@
+making routes - 
+
+auth
+POST /auth/login -> user can login 
+POST /auth/signup -> user can signup 
+POST /auth/logout
+
+movies
+GET /movies?page=1&limit=20 -> gives me list of the movies
+POST /movies -> to post the particular movie  (only admin is allowed to post the movies)
+Delete /movies/:movieId (to delete the movie only by admin)
+GET /movies/:movieId -> for the particular movie
+POST /movies/:movieId/reviews -> rate the movie 
+PUT /movies/:movieId/reviews -> update the movie
+DELETE /review/:reviewId -> delete the rate
+get /movies/search?title=titleName&genre=GenreName -> for searching movie 
