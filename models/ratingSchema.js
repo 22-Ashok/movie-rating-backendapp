@@ -31,7 +31,7 @@ const RatingSchema = mongoose.Schema({
 },
 
 {
-    timeStamps:true
+    timestamps:true
 });
 
 /* making compound index of the userId and movieId so that the user do not make multiple review */

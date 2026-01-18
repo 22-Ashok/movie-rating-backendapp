@@ -14,3 +14,6 @@ POST /movies/:movieId/reviews -> rate the movie
 PUT /movies/:movieId/reviews -> update the movie
 DELETE /review/:reviewId -> delete the rate
 get /movies/search?title=titleName&genre=GenreName -> for searching movie 
+
+middleware
+authentication of the user/adim for any routes

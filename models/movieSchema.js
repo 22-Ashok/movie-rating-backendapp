@@ -36,11 +36,10 @@ const MovieSchema = mongoose.Schema({
         type:Date,
         require:true
     }
-
 },
 
 {
-    timeStamps:true
+    timestamps:true
 })
 
 const MovieModel = mongoose.model("MovieModel", MovieSchema);
