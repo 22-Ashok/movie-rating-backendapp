@@ -17,3 +17,5 @@ get /movies/search?title=titleName&genre=GenreName -> for searching movie
 
 middleware
 authentication of the user/adim for any routes
+
+/movies/:movieId/user/:userId/reviews
