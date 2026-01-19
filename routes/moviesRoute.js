@@ -1,5 +1,20 @@
-const routes = require("express").Router();
+const router = require("express").Router();
+const getAllMovies = require("../controllers/movies/getAllMovies");
+const authentication = require("../middlewares/authentication")
+const adminMiddleware = require("../middlewares/adminMiddleware")
+const addMovie = require("../controllers/movies/addMovie");
+
+router.get('/movies', getAllMovies);
+router.post('/movies', authentication, adminMiddleware, addMovie);
+/*
+router.delete('/movies/:movieId', authentication, adminMiddleware, deleteMovie);
+router.get('/movies/search', searchMovie);
+router.get('/movies/:movieId', getMovie);
 
 
+// for review
+router.post('/movies/:movieId/reviews', authentication, postReview);
+router.put('/movies/:movieId/reviews', authentication, editReview);
+router.delete('/review/:reviewId', authentication, deleteReview); */
 
-module.exports = routes;
+module.exports = router;

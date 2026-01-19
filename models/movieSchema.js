@@ -20,15 +20,15 @@ const MovieSchema = mongoose.Schema({
 
     avgRating:{
         type:Number,
-        require:true,
-        min:1,
-        max:5
+        min:0,
+        max:5,
+        default:0,
+        require:true
     },
 
     totalRating:{
         type:Number,
-        min:0,
-        max:1000,
+        default:0,
         require:true
     },
 
