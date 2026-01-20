@@ -7,6 +7,9 @@ const deleteMovie = require("../controllers/movies/deleteMovie")
 const searchMovie = require("../controllers/movies/searchMovie")
 const getMovie = require("../controllers/movies/getMovie")
 const postReview = require("../controllers/reviews/postReview")
+const editReview = require("../controllers/reviews/editReview")
+const deleteReview = require("../controllers/reviews/deleteReview")
+
 
 router.get('/movies', getAllMovies);
 router.post('/movies', authentication, adminMiddleware, addMovie);
@@ -16,8 +19,7 @@ router.get('/movies/:movieId', getMovie);
 
 // for review
 router.post('/movies/:movieId/reviews', authentication, postReview);
-/*
-router.put('/movies/:movieId/reviews', authentication, editReview);
-router.delete('/review/:reviewId', authentication, deleteReview); */
+router.patch('/movies/:movieId/reviews', authentication, editReview);
+router.delete('/review/:reviewId', authentication, deleteReview); 
 
 module.exports = router;
